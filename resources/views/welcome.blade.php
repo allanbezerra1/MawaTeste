@@ -35,7 +35,7 @@
                     <a class="nav-link nav-link-notifications" id="dropdownNotifications" data-toggle="dropdown"
                         href="#">
                         <i class="oi oi-bell display-inline-block align-middle"></i>
-                        <span class="nav-link-notification-number">{{ count($money) }}</span>
+                        {{-- <span class="nav-link-notification-number">{{ count($money) }}</span> --}}
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-notifications"
                         aria-labelledby="dropdownNotifications">
@@ -68,8 +68,7 @@
                 <!-- Notifications -->
                 <li class="nav-item dropdown">
                     <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
-                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-                            class="d-inline-block align-top" alt="">
+                        <img src="{{ asset('img/perfil.jpg') }}" class="d-inline-block align-top" alt="">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
