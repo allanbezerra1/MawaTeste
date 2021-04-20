@@ -35,7 +35,9 @@
                     <a class="nav-link nav-link-notifications" id="dropdownNotifications" data-toggle="dropdown"
                         href="#">
                         <i class="oi oi-bell display-inline-block align-middle"></i>
-                        {{-- <span class="nav-link-notification-number">{{ count($money) }}</span> --}}
+                        @if (isset($money))
+                        <span class="nav-link-notification-number">{{ count($money) }}</span>
+                        @endif
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-notifications"
                         aria-labelledby="dropdownNotifications">

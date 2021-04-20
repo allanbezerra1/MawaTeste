@@ -77,7 +77,7 @@
                         @if (isset($historic))
                             @forelse ($historic as $item )
                                 <ul class="list-group-item">1-{{ $item->coin }}--
-                                    {{ $item->name }}-- R$: {{ $item->high }} BRL</ul>
+                                    {{ $item->name }}-- R$: {{ $item->high }} BRL   {{ date('d/m/Y', strtotime($item->created_at)) }}</ul>
                             @empty
 
                             @endforelse
