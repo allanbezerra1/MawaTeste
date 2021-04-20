@@ -15,9 +15,7 @@ class apiController extends Controller
         $response = $client->request('GET', $url, [
             'verify'  => false,
         ]);
-        $responseBody = json_decode($response->getBody());
-        dd($responseBody);
-
-       // return view('projects.apiwithoutkey', compact('responseBody'));
+        $responseBody = json_decode($response->getBody());      
+        return view('projects.apiwithoutkey', compact('responseBody'));
     }
 }
